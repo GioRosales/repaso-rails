@@ -1,0 +1,8 @@
+<h1>Holis, soy el que te lo muestra</h1>
+<% if @hotel %>
+<p><span style="font-weight: bold">Nombre:</span> <%= @hotel.name %></p>
+<p><span style="font-weight: bold">Estrellas:</span> <%= @hotel.stars %></p>
+<% else %>
+<p>No existe el hotel</p>
+<% end %>
+<%= link_to "ver hoteles", hotels_path %>

@@ -1,0 +1,12 @@
+<h1>Holis</h1>
+<%= link_to "Crear hotel", new_hotel_path %>
+<% @hotels.each do |hotel| %>
+<p><span style="font-weight: bold">Nombre:</span> <%= hotel.name %></p>
+<p><span style="font-weight: bold">Estrellas:</span> <%= hotel.stars %></p>
+<div class="acciones">
+  <a href="<%= hotel_path(hotel.id) %>">Ver detalles</a><!-- show -->
+  <a href="<%= edit_hotel_path(hotel.id) %>">Editar</a><!-- edit -->
+  <%= link_to "Eliminar", hotel_path(hotel.id), method: :delete %><!-- destroy -->
+</div>
+<hr>
+<% end %>

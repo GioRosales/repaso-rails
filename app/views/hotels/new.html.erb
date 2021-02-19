@@ -1,0 +1,14 @@
+<h2>Hola soy la acción new</h2>
+<%= form_with model: @hotel, local: true do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :stars %>
+    <%= form.number_field :stars %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
