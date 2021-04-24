@@ -1,0 +1,6 @@
+<div class="container">
+  <h1>Observando el teléfono del estado <%= @phone.state.name %></h1>
+  <p>Este es un teléfono que sirve para poder contestar llamadas</p>
+  <p>Teléfono: <strong><%= @phone.number %></strong></p>
+  <%= link_to "Regresar", phones_path, class: "btn btn-primary" %>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <h1>Semaforo por estado</h1>  
+    <%= link_to "dar de alta", new_semaphore_path, class: "btn btn-primary align-self-center" %>
+  </div>
+  <div class="d-block">
+    <% @semaphores.each do |sem| %>
+      <div class="w-100">
+        <h3>El estado <%= sem.state.name.capitalize %> estuvo en semáforo <%= sem.color.titleize %></h3>
+        <p>de <%= sem.start %> al <%= sem.end %></p>
+      </div>
+      <hr>
+    <% end %>
+  </div>
+</div>

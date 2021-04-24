@@ -1,0 +1,14 @@
+<div class="container mt-3">
+  <div class="d-flex justify-content-around">
+    <h1 class="text-center">Historial del estado de <%= @state.name.capitalize %></h1>
+    <%= link_to "Crear semáforo", new_semaphore_path, class: "btn btn-secondary align-self-center" %>
+  </div>
+  <% @state.semaphores.each do |sem| %>
+    <ul>
+      <li><strong>Color:</strong> <%= sem.color.capitalize %></li>
+      <li><strong>Fecha inicio:</strong> <%= sem.start %></li>
+      <li><strong>Fecha fin:</strong> <%= sem.end %></li>
+    </ul>
+    <hr>
+  <% end %>
+</div>

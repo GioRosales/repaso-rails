@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <h1>Creando un nuevo semáforo</h1>
+    <%= link_to "regresar", semaphores_path, class: "btn btn-secondary align-self-center" %>
+  </div>
+  <%= render 'form', semaphore: @semaphore %>
+</div>

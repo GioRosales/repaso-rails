@@ -1,0 +1,11 @@
+<h1>Teléfonos registrados</h1>
+<%= link_to "crear uno", new_phone_path, class: "btn btn-secondary" %>
+<% @phones.each do |phone| %>
+  <div>
+    <h3>Estado: <%= phone.state.name %></h3>
+    <p>Telefono: <%= phone.number %></p>
+    <%= link_to "Más información", phone, class: "btn btn-primary" %>
+    <%= link_to "Editar", edit_phone_path(phone), class: "btn btn-success" %>
+    <%= link_to "Eliminar", phone, method: :delete, class: "btn btn-danger" %>
+  </div>
+<% end %>

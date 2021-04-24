@@ -1,5 +1,8 @@
 class HotelsController < ApplicationController
   before_action :get_hotel, except: [:index, :new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
+  # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
 
   # Acciones
   def index

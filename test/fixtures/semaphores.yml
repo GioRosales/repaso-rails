@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state: 
+  color: 1
+  start: 2021-04-24
+  end: 2021-04-24
+
+two:
+  state: 
+  color: 1
+  start: 2021-04-24
+  end: 2021-04-24

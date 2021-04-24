@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # REST
   resources :hotels
@@ -10,6 +11,13 @@ Rails.application.routes.draw do
   # put     '/hotels/:popo',        to: 'hotels#update'
   # patch   '/hotels/:popo',        to: 'hotels#update'
   # delete  '/hotels/:popo',        to: 'hotels#destroy'
+
+  resources :phones
+  resources :semaphores
+
+  get '/states/:id/semaphores', to: "states#semaphores", as: :state_semaphore
+
+  root to: "hotels#index"
 
   # _path
   # hotel_path => '/hotels/:popo' method: :put
